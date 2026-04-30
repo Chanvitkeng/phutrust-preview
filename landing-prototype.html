@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PhuTrust — ขายฝากที่ดิน ถูกกฎหมาย ปลอดภัย จดที่กรมที่ดิน 100%</title>
+<meta name="description" content="PhuTrust แพลตฟอร์มขายฝากที่ดินที่จดทะเบียนถูกต้องที่กรมที่ดิน ผลประโยชน์ตอบแทนไม่เกิน 15% ตาม พ.ร.บ. ขายฝาก 2562 ประเมินวงเงินฟรีใน 24 ชั่วโมง" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { 900: '#0A1F3D', 800: '#0F2A52', 700: '#14356A' },
+          brand: { 500: '#2563EB', 600: '#1D4ED8', 100: '#DBEAFE', 50: '#EFF6FF' },
+          ink: { 900: '#0F172A', 700: '#334155', 500: '#64748B', 300: '#CBD5E1' },
+          gold: { 500: '#D4A017', 100: '#FEF3C7' },
+          success: '#059669',
+        },
+        fontFamily: {
+          thai: ['IBM Plex Sans Thai', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'IBM Plex Sans Thai', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  .hero-gradient {
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(37,99,235,0.25), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(212,160,23,0.12), transparent 60%),
+      linear-gradient(180deg, #0A1F3D 0%, #0F2A52 100%);
+  }
+  .glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .card-shadow { box-shadow: 0 1px 3px rgba(15,23,42,0.04), 0 8px 24px rgba(15,23,42,0.06); }
+  .card-shadow-lg { box-shadow: 0 2px 8px rgba(15,23,42,0.06), 0 20px 40px rgba(15,23,42,0.08); }
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .num-tabular { font-variant-numeric: tabular-nums; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-icon { transition: transform .2s ease; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp .6s ease both; }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="bg-white text-ink-900">
+
+<!-- ============ TOP UTILITY BAR ============ -->
+<div class="bg-navy-900 text-white text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-4 text-white/70">
+      <span class="hidden sm:inline">จดทะเบียนนิติบุคคลเลขที่ 0105566XXXXXX • กรมพัฒนาธุรกิจการค้า</span>
+      <span class="sm:hidden">จดทะเบียน DBD ถูกต้อง</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:021234567" class="flex items-center gap-1.5 hover:text-white">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.95.68l1.5 4.49a1 1 0 01-.5 1.21l-1.7.85a11.04 11.04 0 005.52 5.52l.85-1.7a1 1 0 011.21-.5l4.49 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+        02-123-4567
+      </a>
+      <a href="#" class="hidden md:flex items-center gap-1.5 bg-green-500 text-white px-2.5 py-1 rounded-md font-medium hover:bg-green-600">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+        @phutrust
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-ink-300/40">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-lg bg-navy-900 flex items-center justify-center">
+        <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M2 20l5.5-9 3.5 5.5 2.5-4 8.5 7.5H2zm6.5-5.5l-3 5h11l-4.5-4-2.5 4-1-5z"/></svg>
+      </div>
+      <div class="leading-tight">
+        <div class="font-bold text-navy-900 text-lg">PhuTrust</div>
+        <div class="text-[10px] text-ink-500 -mt-0.5">ขายฝากถูกกฎหมาย</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-ink-700">
+      <a href="#how" class="hover:text-brand-600">ขั้นตอน</a>
+      <a href="#calculator" class="hover:text-brand-600">ประเมินวงเงิน</a>
+      <a href="#compare" class="hover:text-brand-600">เปรียบเทียบ</a>
+      <a href="#faq" class="hover:text-brand-600">คำถามที่พบบ่อย</a>
+      <a href="#" class="hover:text-brand-600">สำหรับนักลงทุน</a>
+      <a href="#" class="hover:text-brand-600">เกี่ยวกับเรา</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="tel:021234567" class="hidden sm:block text-sm font-medium text-navy-900">02-123-4567</a>
+      <a href="#calculator" class="bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg">ประเมินวงเงินฟรี</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero-gradient relative overflow-hidden text-white">
+  <div class="absolute inset-0 grid-pattern opacity-60"></div>
+  <div class="relative max-w-7xl mx-auto px-4 pt-16 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7 fade-up">
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 text-xs font-medium mb-6">
+        <span class="w-2 h-2 rounded-full bg-success"></span>
+        จดทะเบียนที่กรมที่ดิน 100% ตาม พ.ร.บ. ขายฝาก 2562
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+        ขายฝากที่ดิน<br/>
+        <span class="text-gold-500">อย่างถูกต้อง ปลอดภัย</span><br/>
+        จบทุกขั้นตอนที่กรมที่ดิน
+      </h1>
+      <p class="mt-6 text-lg text-white/80 max-w-xl leading-relaxed">
+        แพลตฟอร์มจับคู่เจ้าของที่ดินกับนักลงทุนที่ผ่านการตรวจสอบ
+        ดอกเบี้ยไม่เกิน 15% ต่อปี ไม่มีค่าใช้จ่ายแอบแฝง
+        ทีมทนายและผู้เชี่ยวชาญดูแลทุกขั้นตอนให้คุณ
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#calculator" class="bg-gold-500 hover:bg-amber-500 text-navy-900 font-bold px-6 py-4 rounded-lg text-base inline-flex items-center justify-center gap-2">
+          ประเมินวงเงินฟรีใน 24 ชม.
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#" class="border-2 border-white/30 hover:border-white hover:bg-white/5 text-white font-semibold px-6 py-4 rounded-lg text-base inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+          ปรึกษาฟรีผ่าน Line
+        </a>
+      </div>
+
+      <!-- Trust markers -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
+        <div class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="text-sm text-white/90 leading-tight">จดทะเบียน DBD<br/><span class="text-white/60 text-xs">ตรวจสอบได้</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <div class="text-sm text-white/90 leading-tight">จดที่กรมที่ดิน<br/><span class="text-white/60 text-xs">ทุกเคส 100%</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+          <div class="text-sm text-white/90 leading-tight">ดอกเบี้ย ≤ 15%/ปี<br/><span class="text-white/60 text-xs">ตามกฎหมาย</span></div>
+        </div>
+        <div class="flex items-start gap-2">
+          <svg class="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <div class="text-sm text-white/90 leading-tight">ทนายประจำ<br/><span class="text-white/60 text-xs">ปรึกษาฟรี</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Card / Visual -->
+    <div class="lg:col-span-5 fade-up">
+      <div class="glass rounded-2xl p-6 card-shadow-lg">
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-xs text-white/60 uppercase tracking-wider">ตัวอย่างดีลล่าสุด</div>
+          <div class="flex items-center gap-1.5 text-xs text-success">
+            <span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse"></span>
+            สำเร็จแล้ว
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-xl p-5 border border-white/10">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="text-xs text-white/60">ที่ดินเปล่า 2 ไร่ 1 งาน</div>
+              <div class="font-semibold text-white mt-0.5">ต.บางกะปิ กรุงเทพฯ</div>
+            </div>
+            <div class="bg-gold-500/20 border border-gold-500/40 text-gold-500 text-xs font-bold px-2 py-1 rounded">โฉนด นส.4</div>
+          </div>
+          <div class="mt-5 pt-5 border-t border-white/10 grid grid-cols-2 gap-4 num-tabular">
+            <div>
+              <div class="text-xs text-white/60">ราคาประเมิน</div>
+              <div class="text-white font-semibold text-lg">8,500,000</div>
+            </div>
+            <div>
+              <div class="text-xs text-white/60">วงเงินขายฝาก</div>
+              <div class="text-gold-500 font-bold text-lg">5,950,000</div>
+            </div>
+            <div>
+              <div class="text-xs text-white/60">ระยะเวลา</div>
+              <div class="text-white font-semibold">3 ปี</div>
+            </div>
+            <div>
+              <div class="text-xs text-white/60">ผลตอบแทน/ปี</div>
+              <div class="text-white font-semibold">14.5%</div>
+            </div>
+          </div>
+        </div>
+        <!-- Stats strip -->
+        <div class="mt-5 grid grid-cols-3 gap-3 text-center">
+          <div>
+            <div class="text-2xl font-bold text-white num-tabular">2,500<span class="text-gold-500">+</span></div>
+            <div class="text-[10px] text-white/60 uppercase tracking-wider">ล้านบาท</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-white num-tabular">800<span class="text-gold-500">+</span></div>
+            <div class="text-[10px] text-white/60 uppercase tracking-wider">เคสสำเร็จ</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-white num-tabular">98<span class="text-gold-500">%</span></div>
+            <div class="text-[10px] text-white/60 uppercase tracking-wider">แนะนำต่อ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="bg-white border-b border-ink-300/40">
+  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-wrap items-center justify-center lg:justify-between gap-6">
+    <div class="text-xs text-ink-500 font-medium uppercase tracking-wider">ได้รับการรับรอง / เป็นที่ไว้วางใจจาก</div>
+    <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-ink-500">
+      <div class="flex items-center gap-2 font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        กรมพัฒนาธุรกิจการค้า
+      </div>
+      <div class="flex items-center gap-2 font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        กรมที่ดิน
+      </div>
+      <div class="flex items-center gap-2 font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        สภาทนายความ
+      </div>
+      <div class="flex items-center gap-2 font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21 11V9l-2-1V5l-3-1-1-2h-6l-1 2-3 1v3L3 9v2l2 1v3l3 1 1 2h6l1-2 3-1v-3l2-1zm-9 5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+        ISO/IEC 27001
+      </div>
+      <div class="flex items-center gap-2 font-semibold">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+        สมาคมสินเชื่อที่อยู่อาศัย
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="py-20 bg-ink-50/40" style="background:#F8FAFC;">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-3xl">
+      <div class="text-brand-600 font-semibold text-sm mb-3 uppercase tracking-wider">ทำไมต้อง PhuTrust</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy-900 leading-tight">
+        ตลาดขายฝากมีมิจฉาชีพเยอะ<br/>
+        <span class="text-brand-600">เราเข้ามาเพื่อทำให้ทุกอย่างโปร่งใส</span>
+      </h2>
+      <p class="mt-4 text-ink-700 text-lg">
+        ไม่มีสัญญาใต้โต๊ะ ไม่มีค่าธรรมเนียมแอบแฝง ไม่มีการกดดันให้ต้องรีบตัดสินใจ
+        ทุกเคสต้องจดทะเบียนที่กรมที่ดิน มีทนายร่วมพิจารณา และโปร่งใสทุกขั้นตอน
+      </p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="font-bold text-navy-900 text-lg mb-2">จดทะเบียนถูกกฎหมายทุกเคส</h3>
+        <p class="text-ink-700 text-sm leading-relaxed">
+          เซ็นสัญญาที่กรมที่ดินเท่านั้น ไม่มีสัญญาใต้โต๊ะ ไม่มีการนัดเซ็นตามร้านกาแฟหรือโรงแรม
+          ได้เอกสารราชการที่ตรวจสอบย้อนได้ตลอดอายุสัญญา
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-navy-900 text-lg mb-2">ดอกเบี้ยโปร่งใส ตามกฎหมาย</h3>
+        <p class="text-ink-700 text-sm leading-relaxed">
+          ผลประโยชน์ตอบแทนไม่เกิน 15%/ปี ตาม พ.ร.บ. ขายฝาก 2562
+          ไม่มีค่านายหน้า ค่าดำเนินการ หรือค่าธรรมเนียมแอบแฝง — แจ้งทุกยอดล่วงหน้าเป็นลายลักษณ์อักษร
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3 class="font-bold text-navy-900 text-lg mb-2">ทนายและผู้เชี่ยวชาญด้านที่ดิน</h3>
+        <p class="text-ink-700 text-sm leading-relaxed">
+          ทีมทนายประจำช่วยตรวจสอบเอกสาร ตรวจสิทธิ์ในที่ดิน ตรวจภาระผูกพัน
+          และอธิบายเงื่อนไขทุกข้อก่อนเซ็น ให้คำปรึกษาฟรีโดยไม่มีข้อผูกพัน
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-bold text-navy-900 text-lg mb-2">อนุมัติไว รู้ผลใน 24 ชม.</h3>
+        <p class="text-ink-700 text-sm leading-relaxed">
+          ส่งเอกสารผ่าน Line ก็ประเมินได้ ไม่ต้องตรวจเครดิตบูโร ไม่ต้องมีสลิปเงินเดือน
+          เมื่อตกลงแล้วนัดทำสัญญาและรับเงินที่กรมที่ดินได้ภายใน 3-7 วันทำการ
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto">
+      <div class="text-brand-600 font-semibold text-sm mb-3 uppercase tracking-wider">ขั้นตอนง่ายๆ</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy-900">
+        จากส่งเอกสาร ถึงรับเงิน ใน 4 ขั้นตอน
+      </h2>
+      <p class="mt-4 text-ink-700 text-lg">
+        โปร่งใสทุกขั้นตอน คุณรู้ล่วงหน้าเสมอว่าต้องเตรียมอะไรและจะเกิดอะไรขึ้นต่อไป
+      </p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+      <!-- step 1 -->
+      <div class="relative">
+        <div class="bg-white rounded-2xl p-6 border border-ink-300/40 card-shadow h-full">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-navy-900 text-gold-500 font-bold flex items-center justify-center">01</div>
+            <div class="text-xs text-ink-500 font-medium uppercase tracking-wider">ภายใน 5 นาที</div>
+          </div>
+          <h3 class="font-bold text-navy-900 text-lg mb-2">ส่งข้อมูลที่ดิน</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">
+            ถ่ายรูปโฉนด (นส.4, นส.3 ก, นส.3) ส่งผ่าน Line OA หรือกรอกในเว็บ
+            พร้อมแจ้งวงเงินที่ต้องการ
+          </p>
+        </div>
+      </div>
+      <!-- step 2 -->
+      <div class="relative">
+        <div class="bg-white rounded-2xl p-6 border border-ink-300/40 card-shadow h-full">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-navy-900 text-gold-500 font-bold flex items-center justify-center">02</div>
+            <div class="text-xs text-ink-500 font-medium uppercase tracking-wider">ภายใน 24 ชม.</div>
+          </div>
+          <h3 class="font-bold text-navy-900 text-lg mb-2">ประเมินวงเงิน</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">
+            ทีมประเมินดูทำเล ตรวจสิทธิ์ในที่ดิน แจ้งวงเงินอนุมัติ ผลตอบแทน และเงื่อนไข
+            เป็นลายลักษณ์อักษร
+          </p>
+        </div>
+      </div>
+      <!-- step 3 -->
+      <div class="relative">
+        <div class="bg-white rounded-2xl p-6 border border-ink-300/40 card-shadow h-full">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-navy-900 text-gold-500 font-bold flex items-center justify-center">03</div>
+            <div class="text-xs text-ink-500 font-medium uppercase tracking-wider">ภายใน 3-7 วัน</div>
+          </div>
+          <h3 class="font-bold text-navy-900 text-lg mb-2">นัดหมายที่กรมที่ดิน</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">
+            ทำสัญญาขายฝากและจดทะเบียนต่อหน้าเจ้าพนักงาน รับเงินสดหรือโอนในวันเดียวกัน
+            พร้อมสำเนาเอกสารครบชุด
+          </p>
+        </div>
+      </div>
+      <!-- step 4 -->
+      <div class="relative">
+        <div class="bg-white rounded-2xl p-6 border border-ink-300/40 card-shadow h-full">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-navy-900 text-gold-500 font-bold flex items-center justify-center">04</div>
+            <div class="text-xs text-ink-500 font-medium uppercase tracking-wider">1-10 ปี</div>
+          </div>
+          <h3 class="font-bold text-navy-900 text-lg mb-2">ไถ่ถอนเมื่อพร้อม</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">
+            ไถ่ถอนคืนได้ทุกเวลาภายในระยะสัญญา หรือขอขยายเวลาได้
+            ระบบเตือนอัตโนมัติก่อนครบกำหนด
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="#calculator" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700">
+        เริ่มประเมินวงเงินของคุณ
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section id="calculator" class="py-20 bg-gradient-to-b from-navy-900 to-navy-800 text-white">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="text-gold-500 font-semibold text-sm mb-3 uppercase tracking-wider">เครื่องคำนวณ</div>
+      <h2 class="text-3xl md:text-4xl font-bold leading-tight">
+        ลองประเมินวงเงินที่ดินของคุณ<br/>
+        <span class="text-gold-500">ฟรี ไม่ต้องลงทะเบียน</span>
+      </h2>
+      <p class="mt-4 text-white/80 text-lg leading-relaxed">
+        ตัวเลขโดยประมาณจากราคาประเมินและทำเล — ทีมของเราจะติดต่อกลับพร้อมวงเงินจริง
+        ภายใน 24 ชั่วโมงหลังจากส่งเอกสาร
+      </p>
+      <div class="mt-8 space-y-3">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div class="text-white/90">ไม่ตรวจเครดิตบูโร ไม่มีผลต่อประวัติการเงิน</div>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div class="text-white/90">ข้อมูลของคุณเข้ารหัสและเก็บเป็นความลับตาม PDPA</div>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div class="text-white/90">ไม่มีค่าใช้จ่ายหรือข้อผูกพันใดๆ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl p-6 md:p-8 text-ink-900 card-shadow-lg">
+      <div class="mb-5">
+        <label class="block text-sm font-semibold text-navy-900 mb-2">ราคาประเมินที่ดิน (บาท)</label>
+        <input id="calc-price" type="number" value="5000000" min="100000" step="100000"
+          class="w-full px-4 py-3 text-lg font-semibold border-2 border-ink-300 rounded-lg focus:border-brand-500 focus:outline-none num-tabular" />
+        <input id="calc-range" type="range" min="500000" max="50000000" step="100000" value="5000000" class="w-full mt-3 accent-brand-500" />
+        <div class="flex justify-between text-xs text-ink-500 mt-1">
+          <span>500,000</span>
+          <span>50,000,000</span>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label class="block text-sm font-semibold text-navy-900 mb-2">ทำเลที่ดิน</label>
+        <div class="grid grid-cols-3 gap-2">
+          <button data-ltv="0.70" class="loc-btn bg-brand-500 text-white py-2.5 rounded-lg text-sm font-semibold">ในเมือง</button>
+          <button data-ltv="0.60" class="loc-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300">ชานเมือง</button>
+          <button data-ltv="0.50" class="loc-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300">ต่างจังหวัด</button>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-sm font-semibold text-navy-900 mb-2">ระยะเวลาขายฝาก</label>
+        <div class="grid grid-cols-4 gap-2">
+          <button data-years="1" class="yr-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300">1 ปี</button>
+          <button data-years="2" class="yr-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300">2 ปี</button>
+          <button data-years="3" class="yr-btn bg-brand-500 text-white py-2.5 rounded-lg text-sm font-semibold">3 ปี</button>
+          <button data-years="5" class="yr-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300">5 ปี</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-xl p-5 text-white">
+        <div class="text-xs text-white/60 uppercase tracking-wider mb-1">วงเงินโดยประมาณ</div>
+        <div id="calc-result" class="text-4xl font-bold text-gold-500 num-tabular">3,500,000</div>
+        <div class="text-xs text-white/60 mt-1">บาท</div>
+        <div class="mt-4 pt-4 border-t border-white/10 grid grid-cols-2 gap-3 num-tabular">
+          <div>
+            <div class="text-xs text-white/60">ผลประโยชน์ตอบแทน/เดือน</div>
+            <div id="calc-monthly" class="font-semibold text-lg">43,750</div>
+          </div>
+          <div>
+            <div class="text-xs text-white/60">ค่าสินไถ่รวม (ตลอดสัญญา)</div>
+            <div id="calc-total" class="font-semibold text-lg">5,075,000</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="mt-5 w-full bg-gold-500 hover:bg-amber-500 text-navy-900 font-bold py-4 rounded-lg text-base inline-flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+        ส่งเอกสารผ่าน Line รับประเมินจริง
+      </a>
+      <div class="mt-3 text-xs text-ink-500 text-center leading-relaxed">
+        * ตัวเลขเป็นประมาณการ วงเงินจริงขึ้นอยู่กับการตรวจสอบเอกสารและทำเลโดยทีมผู้เชี่ยวชาญ
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section id="compare" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-brand-600 font-semibold text-sm mb-3 uppercase tracking-wider">เปรียบเทียบทางเลือก</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy-900">
+        ขายฝาก vs จำนอง vs เงินกู้นอกระบบ
+      </h2>
+      <p class="mt-4 text-ink-700 text-lg">
+        เมื่อต้องการเงินเร่งด่วนและมีที่ดิน ลองดูว่าทางเลือกไหนเหมาะกับคุณที่สุด
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-ink-300/40 card-shadow">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-ink-50">
+            <th class="text-left px-6 py-5 font-semibold text-ink-500 min-w-[180px]">เกณฑ์</th>
+            <th class="px-6 py-5 bg-brand-50 text-navy-900 min-w-[180px]">
+              <div class="font-bold">ขายฝากกับ PhuTrust</div>
+              <div class="text-xs text-brand-600 mt-1 font-medium">แนะนำ</div>
+            </th>
+            <th class="px-6 py-5 min-w-[160px]">
+              <div class="font-bold text-navy-900">จำนองธนาคาร</div>
+            </th>
+            <th class="px-6 py-5 min-w-[160px]">
+              <div class="font-bold text-navy-900">เงินกู้นอกระบบ</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink-300/40">
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">ระยะเวลาอนุมัติ</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">3-7 วัน</td>
+            <td class="px-6 py-4 text-center text-ink-700">2-4 สัปดาห์</td>
+            <td class="px-6 py-4 text-center text-ink-700">ทันที</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">วงเงินสูงสุด</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">60-70% ของราคาประเมิน</td>
+            <td class="px-6 py-4 text-center text-ink-700">70-80%</td>
+            <td class="px-6 py-4 text-center text-ink-700">30-50%</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">ดอกเบี้ย/ผลตอบแทน/ปี</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">ไม่เกิน 15%</td>
+            <td class="px-6 py-4 text-center text-ink-700">6-8%</td>
+            <td class="px-6 py-4 text-center text-red-600">20-60%+</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">ตรวจเครดิตบูโร</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">ไม่ต้อง</td>
+            <td class="px-6 py-4 text-center text-ink-700">ต้องตรวจ</td>
+            <td class="px-6 py-4 text-center text-ink-700">ไม่ต้อง</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">ต้องมีสลิปเงินเดือน</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">ไม่ต้อง</td>
+            <td class="px-6 py-4 text-center text-ink-700">ต้อง</td>
+            <td class="px-6 py-4 text-center text-ink-700">ไม่ต้อง</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">ถูกต้องตามกฎหมาย</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">✓</td>
+            <td class="px-6 py-4 text-center text-success font-semibold">✓</td>
+            <td class="px-6 py-4 text-center text-red-600 font-semibold">✗</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">จดทะเบียนที่กรมที่ดิน</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">✓</td>
+            <td class="px-6 py-4 text-center text-success font-semibold">✓</td>
+            <td class="px-6 py-4 text-center text-red-600 font-semibold">✗</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-ink-700">มีทนายดูแลสัญญา</td>
+            <td class="px-6 py-4 bg-brand-50/40 text-center font-semibold text-success">✓ ฟรี</td>
+            <td class="px-6 py-4 text-center text-ink-700">–</td>
+            <td class="px-6 py-4 text-center text-red-600 font-semibold">✗</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-20" style="background:#F8FAFC;">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-brand-600 font-semibold text-sm mb-3 uppercase tracking-wider">ลูกค้าจริง เคสจริง</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy-900">
+        เสียงจากลูกค้าที่ไถ่ถอนสำเร็จ
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="flex gap-1 text-gold-500 mb-4">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-ink-700 leading-relaxed mb-5">
+          "ต้องการเงินด่วนไปขยายธุรกิจ ธนาคารไม่ผ่าน เพราะรายได้ไม่นิ่ง เจ้าหน้าที่ PhuTrust ประเมินที่ดินให้ภายในวันเดียว
+          3 วันต่อมาได้เงินครบ ผ่านไป 2 ปีไถ่คืนได้ตามนัด ไม่มีอะไรซับซ้อนอย่างที่กลัว"
+        </p>
+        <div class="flex items-center gap-3 pt-5 border-t border-ink-300/40">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-500 to-navy-900 flex items-center justify-center text-white font-bold">ส</div>
+          <div>
+            <div class="font-semibold text-navy-900">คุณสมชาย ก.</div>
+            <div class="text-xs text-ink-500">เจ้าของที่ดิน 5 ไร่ • ชลบุรี</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="flex gap-1 text-gold-500 mb-4">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-ink-700 leading-relaxed mb-5">
+          "เคยเกือบโดนหลอกให้เซ็นสัญญาใต้โต๊ะ ตอนไปเจอ PhuTrust ทุกอย่างชัดเจน มีทนายอธิบายทีละข้อ
+          นัดเซ็นที่กรมที่ดินจริง ไม่มีการนัดเจอตามที่ส่วนตัว รู้สึกปลอดภัยมาก"
+        </p>
+        <div class="flex items-center gap-3 pt-5 border-t border-ink-300/40">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-br from-gold-500 to-amber-700 flex items-center justify-center text-white font-bold">ม</div>
+          <div>
+            <div class="font-semibold text-navy-900">คุณมาลี พ.</div>
+            <div class="text-xs text-ink-500">บ้านพร้อมที่ดิน • เชียงใหม่</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 card-shadow border border-ink-300/30">
+        <div class="flex gap-1 text-gold-500 mb-4">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-ink-700 leading-relaxed mb-5">
+          "ดอกเบี้ย 15% ตามที่บอก ไม่มีค่าแอบแฝงเลยจริงๆ ใช้เงินไปสร้างบ้านให้ลูกสาว
+          ทีมงานติดตามดูแลจนถึงวันไถ่ถอน ประทับใจมากครับ"
+        </p>
+        <div class="flex items-center gap-3 pt-5 border-t border-ink-300/40">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center text-white font-bold">ว</div>
+          <div>
+            <div class="font-semibold text-navy-900">คุณวิชัย ร.</div>
+            <div class="text-xs text-ink-500">ที่ดินเปล่า 10 ไร่ • นครราชสีมา</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <div class="text-brand-600 font-semibold text-sm mb-3 uppercase tracking-wider">คำถามที่พบบ่อย</div>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy-900">
+        ข้อสงสัยยอดฮิต
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden" open>
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">ขายฝากต่างจากจำนองอย่างไร?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          การจำนองคือการเอาที่ดินเป็นหลักประกันกู้เงิน กรรมสิทธิ์ยังเป็นของเจ้าของเดิม
+          ส่วนการขายฝากคือการโอนกรรมสิทธิ์ไปยังผู้รับซื้อฝากชั่วคราว โดยมีสิทธิ์ไถ่คืนภายในเวลาที่กำหนด
+          ข้อดีของขายฝากคืออนุมัติไวกว่า วงเงินสูงกว่า และไม่ต้องตรวจเครดิต
+        </div>
+      </details>
+
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">ถ้าไถ่คืนไม่ทันกำหนดจะเกิดอะไรขึ้น?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          ตาม พ.ร.บ. ขายฝาก 2562 ผู้ขายฝากสามารถขอขยายระยะเวลาไถ่ถอนได้ก่อนครบกำหนด
+          (รวมแล้วไม่เกิน 10 ปีจากสัญญาเดิม) PhuTrust จะมีระบบเตือนล่วงหน้า 6 เดือน / 3 เดือน / 1 เดือน
+          เพื่อให้คุณมีเวลาเตรียมตัวหรือเจรจาต่อสัญญา
+        </div>
+      </details>
+
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">ต้องใช้เอกสารอะไรบ้าง?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          เอกสารหลัก: (1) สำเนาโฉนดที่ดิน นส.4 / นส.3 ก / นส.3 (2) บัตรประชาชนเจ้าของ
+          (3) ทะเบียนบ้าน (4) ทะเบียนสมรส/หย่า (ถ้ามี) หรือหนังสือยินยอมคู่สมรส
+          สำหรับนิติบุคคลเพิ่มหนังสือรับรองบริษัทและบัตรประชาชนกรรมการ
+        </div>
+      </details>
+
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">มีค่าธรรมเนียมอะไรที่ต้องจ่ายบ้าง?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          ค่าใช้จ่ายที่กรมที่ดินเป็นไปตามอัตราราชการ: ค่าธรรมเนียมจดทะเบียน 2% ของราคาประเมิน
+          ค่าอากรแสตมป์ 0.5% และภาษีธุรกิจเฉพาะ (ถ้ามี) ส่วน PhuTrust ไม่คิดค่านายหน้าหรือค่าดำเนินการเพิ่มเติมจากเจ้าของที่ดิน
+          ทุกยอดแจ้งชัดในใบเสนอก่อนเซ็น
+        </div>
+      </details>
+
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">วงเงินขายฝากได้สูงสุดกี่เปอร์เซ็นต์?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          ส่วนใหญ่อยู่ที่ 50-70% ของราคาประเมิน ขึ้นอยู่กับทำเลและสภาพที่ดิน
+          ที่ดินในเมืองหรือทำเลที่ซื้อขายคล่องมักได้วงเงินสูงกว่า
+          ที่ดินต่างจังหวัดหรือไกลเมืองอาจได้ 40-55%
+        </div>
+      </details>
+
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">ถ้าที่ดินอยู่ต่างจังหวัดจะรับไหม?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          รับครับ เราดำเนินการได้ทุกจังหวัดในประเทศไทย มีทีมประเมินเดินทางไปตรวจที่ดินได้
+          หรือเจ้าของที่ดินสามารถเดินทางเข้ามาประชุมที่กรุงเทพฯ ได้ ค่าเดินทางของทีม PhuTrust เราจ่ายเองทั้งหมด
+        </div>
+      </details>
+
+      <details class="group bg-ink-50/50 rounded-xl border border-ink-300/40 overflow-hidden">
+        <summary class="flex items-center justify-between px-5 py-4 hover:bg-ink-50">
+          <span class="font-semibold text-navy-900">เซ็นสัญญาที่ไหน มีตัวเลือกเซ็นที่อื่นไหม?</span>
+          <svg class="faq-icon w-5 h-5 text-brand-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-ink-700 leading-relaxed">
+          <strong class="text-navy-900">เซ็นที่กรมที่ดินเท่านั้น</strong> ตามกฎหมายสัญญาขายฝากต้องจดทะเบียนต่อหน้าเจ้าพนักงาน
+          ใครชวนไปเซ็นตามร้านกาแฟ บ้าน หรือโรงแรม ให้ระวัง — นั่นคือสัญญาใต้โต๊ะที่ไม่มีผลบังคับทางกฎหมาย
+          และมักเป็นรูปแบบการหลอกลวง
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="py-20 bg-gradient-to-br from-gold-500 via-amber-500 to-gold-500 relative overflow-hidden">
+  <div class="absolute inset-0 grid-pattern opacity-20"></div>
+  <div class="relative max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-navy-900 leading-tight">
+      พร้อมประเมินวงเงินที่ดินของคุณหรือยัง?
+    </h2>
+    <p class="mt-5 text-navy-900/80 text-lg max-w-2xl mx-auto">
+      ปรึกษาฟรี ไม่มีข้อผูกพัน ทีมของเราตอบทุกคำถามภายใน 15 นาทีในเวลาทำการ
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+      <a href="#" class="bg-navy-900 hover:bg-navy-800 text-white font-bold px-8 py-4 rounded-lg text-base inline-flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+        แอด Line: @phutrust
+      </a>
+      <a href="tel:021234567" class="bg-white hover:bg-white/90 text-navy-900 font-bold px-8 py-4 rounded-lg text-base inline-flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.95.68l1.5 4.49a1 1 0 01-.5 1.21l-1.7.85a11.04 11.04 0 005.52 5.52l.85-1.7a1 1 0 011.21-.5l4.49 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+        โทร 02-123-4567
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy-900 text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M2 20l5.5-9 3.5 5.5 2.5-4 8.5 7.5H2zm6.5-5.5l-3 5h11l-4.5-4-2.5 4-1-5z"/></svg>
+          </div>
+          <div class="font-bold text-lg">PhuTrust</div>
+        </div>
+        <p class="text-sm text-white/60 leading-relaxed mb-4">
+          แพลตฟอร์มขายฝากที่ดิน จดทะเบียนถูกต้องที่กรมที่ดิน
+          ทุกเคสดำเนินการภายใต้ พ.ร.บ. คุ้มครองประชาชนในการทำสัญญาขายฝากที่ดินฯ พ.ศ. 2562
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 008.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.55a8.16 8.16 0 004.77 1.52V6.69h-1.84z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="font-semibold mb-4">สำหรับเจ้าของที่ดิน</div>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#how" class="hover:text-white">ขั้นตอนขายฝาก</a></li>
+          <li><a href="#calculator" class="hover:text-white">ประเมินวงเงินฟรี</a></li>
+          <li><a href="#compare" class="hover:text-white">เปรียบเทียบทางเลือก</a></li>
+          <li><a href="#faq" class="hover:text-white">คำถามที่พบบ่อย</a></li>
+          <li><a href="#" class="hover:text-white">เอกสารที่ต้องเตรียม</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="font-semibold mb-4">สำหรับนักลงทุน</div>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#" class="hover:text-white">ดีลที่กำลังเปิด (Login)</a></li>
+          <li><a href="#" class="hover:text-white">วิธีการลงทุน</a></li>
+          <li><a href="#" class="hover:text-white">ผลตอบแทนและความเสี่ยง</a></li>
+          <li><a href="#" class="hover:text-white">Due diligence process</a></li>
+          <li><a href="#" class="hover:text-white">สมัครเป็นสมาชิกนักลงทุน</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="font-semibold mb-4">ติดต่อเรา</div>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            123/45 อาคารสาทรสแควร์ ชั้น 25<br/>ถนนสาทรเหนือ แขวงสีลม เขตบางรัก<br/>กรุงเทพฯ 10500
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.95.68l1.5 4.49a1 1 0 01-.5 1.21l-1.7.85a11.04 11.04 0 005.52 5.52l.85-1.7a1 1 0 011.21-.5l4.49 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z"/></svg>
+            02-123-4567 (จ.-ศ. 9:00-18:00)
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            info@phutrust.co.th
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+            Line OA: @phutrust
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-white/50">
+      <div>
+        © 2026 บริษัท ภูทรัสต์ จำกัด • เลขทะเบียนนิติบุคคล 0105566XXXXXX<br/>
+        ดำเนินการภายใต้ พ.ร.บ. คุ้มครองประชาชนในการทำสัญญาขายฝากที่ดินเพื่อเกษตรกรรมหรือที่อยู่อาศัย พ.ศ. 2562
+      </div>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-white">นโยบายความเป็นส่วนตัว</a>
+        <a href="#" class="hover:text-white">ข้อกำหนดการใช้งาน</a>
+        <a href="#" class="hover:text-white">PDPA</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Line button -->
+<a href="#" class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-3.5 rounded-full shadow-2xl font-semibold flex items-center gap-2 text-sm">
+  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+  <span class="hidden sm:inline">ปรึกษาฟรีผ่าน Line</span>
+</a>
+
+<script>
+  // Calculator
+  const priceInput = document.getElementById('calc-price');
+  const rangeInput = document.getElementById('calc-range');
+  const resultEl = document.getElementById('calc-result');
+  const monthlyEl = document.getElementById('calc-monthly');
+  const totalEl = document.getElementById('calc-total');
+
+  let ltv = 0.70;
+  let years = 3;
+  const rate = 0.15;
+
+  document.querySelectorAll('.loc-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.loc-btn').forEach(b => {
+        b.className = 'loc-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300';
+      });
+      btn.className = 'loc-btn bg-brand-500 text-white py-2.5 rounded-lg text-sm font-semibold';
+      ltv = parseFloat(btn.dataset.ltv);
+      update();
+    });
+  });
+
+  document.querySelectorAll('.yr-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.yr-btn').forEach(b => {
+        b.className = 'yr-btn bg-ink-50 text-ink-700 py-2.5 rounded-lg text-sm font-semibold border border-ink-300';
+      });
+      btn.className = 'yr-btn bg-brand-500 text-white py-2.5 rounded-lg text-sm font-semibold';
+      years = parseInt(btn.dataset.years);
+      update();
+    });
+  });
+
+  function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
+
+  function update() {
+    const price = parseFloat(priceInput.value) || 0;
+    const loan = price * ltv;
+    const monthly = loan * rate / 12;
+    const total = loan + (loan * rate * years);
+    resultEl.textContent = fmt(loan);
+    monthlyEl.textContent = fmt(monthly);
+    totalEl.textContent = fmt(total);
+  }
+
+  priceInput.addEventListener('input', () => {
+    rangeInput.value = priceInput.value;
+    update();
+  });
+  rangeInput.addEventListener('input', () => {
+    priceInput.value = rangeInput.value;
+    update();
+  });
+
+  update();
+</script>
+
+</body>
+</html>
