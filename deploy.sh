@@ -3,6 +3,8 @@ set -e
 SRC="/Users/chanvit/Documents/Claude/Projects/ขายฝาก"
 cd ~/Projects/phutrust-preview
 cp "$SRC/landing-prototype.html" index.html
+cp "$SRC/sitemap.xml" sitemap.xml
+cp "$SRC/robots.txt" robots.txt
 rm -rf blog
 cp -r "$SRC/blog" blog
 git add -A
