@@ -1,0 +1,154 @@
+{
+  "name": "PhuTrust — Auto FB Post from Blog",
+  "active": false,
+  "nodes": [
+    {
+      "id": "n1",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300],
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "cronExpression", "expression": "0 9 * * *"}]
+        }
+      }
+    },
+    {
+      "id": "n2",
+      "name": "Fetch Sitemap",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300],
+      "parameters": {
+        "url": "https://phutrust.com/sitemap.xml",
+        "method": "GET",
+        "options": {}
+      }
+    },
+    {
+      "id": "n3",
+      "name": "Find New Articles",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300],
+      "parameters": {
+        "jsCode": "const xml = $input.first().json.data || '';\nconst re = /<loc>(https:\\/\\/phutrust\\.com\\/blog\\/[^<]+)<\\/loc>/g;\nconst all = []; let m;\nwhile ((m = re.exec(xml)) !== null) {\n  const u = m[1].trim();\n  if (u !== 'https://phutrust.com/blog/') all.push(u);\n}\nconst sd = $getWorkflowStaticData('global');\nconst posted = sd.postedUrls || [];\nconst newU = all.filter(u => !posted.includes(u));\nconsole.log('New URLs:', newU);\nif (newU.length === 0) return [{ json: { hasNew: false, url: '' } }];\nreturn newU.map(u => ({ json: { hasNew: true, url: u } }));"
+      }
+    },
+    {
+      "id": "n4",
+      "name": "Has New?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [900, 300],
+      "parameters": {
+        "conditions": {
+          "options": {"caseSensitive": true, "leftValue": "", "typeValidation": "strict"},
+          "conditions": [{
+            "id": "c1",
+            "leftValue": "={{ $json.hasNew }}",
+            "rightValue": true,
+            "operator": {"type": "boolean", "operation": "equals"}
+          }],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "n5",
+      "name": "Fetch Article",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1120, 200],
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "method": "GET",
+        "options": {}
+      }
+    },
+    {
+      "id": "n6",
+      "name": "Extract Meta",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 200],
+      "parameters": {
+        "jsCode": "const html = $input.first().json.data || '';\nconst tm = html.match(/<title[^>]*>([^<]+)<\\/title>/i);\nconst title = tm ? tm[1].replace(/ \\| PhuTrust/,'').replace(/ \\| .*$/,'').trim() : 'บทความใหม่';\nconst dm = html.match(/<meta[^>]+name=[\"']description[\"'][^>]+content=[\"']([^\"']+)[\"']/i) || html.match(/<meta[^>]+content=[\"']([^\"']+)[\"'][^>]+name=[\"']description[\"']/i);\nconst desc = dm ? dm[1].trim() : '';\nconst articleUrl = $('Find New Articles').item.json.url;\nconsole.log('Title:', title, 'Desc:', desc);\nreturn [{ json: { title, desc, url: articleUrl } }];"
+      }
+    },
+    {
+      "id": "n7",
+      "name": "Claude Teaser",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1560, 200],
+      "parameters": {
+        "url": "https://api.anthropic.com/v1/messages",
+        "method": "POST",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {"name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}"},
+            {"name": "anthropic-version", "value": "2023-06-01"},
+            {"name": "content-type", "value": "application/json"}
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: 'claude-haiku-4-5', max_tokens: 400, messages: [{ role: 'user', content: 'คุณเป็น Social Media Manager ของ PhuTrust บริษัทขายฝากที่ดินภาคใต้\\n\\nเขียน Facebook post ภาษาไทย สำหรับบทความ:\\nชื่อ: ' + $json.title + '\\nคำอธิบาย: ' + $json.desc + '\\n\\nFormat: hook 1 ประโยค + อธิบาย 2-3 ประโยค + CTA สั้น + emoji\\nความยาว 4-6 บรรทัด ไม่ต้องใส่ link ตอบเฉพาะ post text เท่านั้น' }] }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "n8",
+      "name": "Build Post",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1780, 200],
+      "parameters": {
+        "jsCode": "const teaser = $input.first().json.content[0].text.trim();\nconst art = $('Extract Meta').item.json;\nconst msg = teaser + '\\n\\n👉 อ่านต่อ: ' + art.url + '\\n\\n#ขายฝาก #ขายฝากที่ดิน #ภูเก็ต #PhuTrust';\nreturn [{ json: { message: msg, url: art.url } }];"
+      }
+    },
+    {
+      "id": "n9",
+      "name": "Post to FB",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2000, 200],
+      "parameters": {
+        "url": "=https://graph.facebook.com/v25.0/{{ $env.FB_PAGE_ID }}/feed",
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ message: $json.message, link: $json.url, access_token: $env.FB_PAGE_TOKEN }) }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "n10",
+      "name": "Save Posted URL",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2220, 200],
+      "parameters": {
+        "jsCode": "const url = $('Extract Meta').item.json.url;\nconst sd = $getWorkflowStaticData('global');\nif (!sd.postedUrls) sd.postedUrls = [];\nif (!sd.postedUrls.includes(url)) sd.postedUrls.push(url);\nconsole.log('Saved:', url, '| Total:', sd.postedUrls.length);\nreturn [{ json: { success: true, url, fbPostId: $input.first().json.id } }];"
+      }
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {"main": [[{"node": "Fetch Sitemap", "type": "main", "index": 0}]]},
+    "Fetch Sitemap": {"main": [[{"node": "Find New Articles", "type": "main", "index": 0}]]},
+    "Find New Articles": {"main": [[{"node": "Has New?", "type": "main", "index": 0}]]},
+    "Has New?": {"main": [
+      [{"node": "Fetch Article", "type": "main", "index": 0}],
+      []
+    ]},
+    "Fetch Article": {"main": [[{"node": "Extract Meta", "type": "main", "index": 0}]]},
+    "Extract Meta": {"main": [[{"node": "Claude Teaser", "type": "main", "index": 0}]]},
+    "Claude Teaser": {"main": [[{"node": "Build Post", "type": "main", "index": 0}]]},
+    "Build Post": {"main": [[{"node": "Post to FB", "type": "main", "index": 0}]]},
+    "Post to FB": {"main": [[{"node": "Save Posted URL", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"}
+}
