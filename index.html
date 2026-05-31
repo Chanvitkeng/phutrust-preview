@@ -736,9 +736,7 @@
         <h3 class="text-xl font-bold mb-2">ลงทะเบียนรอดีลแรก</h3>
         <p class="text-white/60 text-sm mb-6">กรอกข้อมูลเพื่อรับแจ้งเตือนเมื่อดีลพร้อม — ไม่มีค่าใช้จ่าย ยกเลิกได้ทุกเมื่อ</p>
 
-        <form id="investor-form" action="https://formsubmit.co/ajax/chanvit.kasetpiban@gmail.com" method="POST" class="space-y-4">
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="box" />
+        <form id="investor-form" class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-white/80 mb-1.5">ชื่อ–นามสกุล <span class="text-red-400">*</span></label>
             <input type="text" name="name" required
@@ -768,7 +766,6 @@
               <option value="gt3m" class="text-gray-800">มากกว่า 3,000,000 บาท</option>
             </select>
           </div>
-          <input type="hidden" name="_subject" value="[PhuTrust] นักลงทุนใหม่ลงทะเบียน" />
           <button type="submit" id="investor-submit"
             class="w-full bg-gold-500 hover:bg-amber-500 text-navy-900 font-bold py-3 rounded-lg text-sm transition flex items-center justify-center gap-2">
             <span id="submit-text">ลงทะเบียนรอดีลแรก</span>
@@ -781,9 +778,14 @@
 
         <!-- Success state -->
         <div id="investor-success" class="hidden text-center py-6">
-          <div class="text-4xl mb-3">✓</div>
-          <p class="font-bold text-lg mb-2">ลงทะเบียนสำเร็จ!</p>
-          <p class="text-white/60 text-sm">เราจะแจ้งเตือนคุณทางอีเมลเมื่อดีลแรกพร้อม ขอบคุณที่สนใจ PhuTrust</p>
+          <div class="text-4xl mb-3">✅</div>
+          <p class="font-bold text-lg mb-2">ข้อมูลพร้อมส่งแล้ว!</p>
+          <p class="text-white/60 text-sm mb-4">LINE เปิดขึ้นมาพร้อมข้อความแล้ว — กด <strong class="text-white">Send</strong> สักครั้งเพื่อยืนยัน<br>เราจะติดต่อกลับภายใน 24 ชม.</p>
+          <a href="https://lin.ee/Ub0Xvbh" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2.5 rounded-lg text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.87 2 10.6c0 2.76 1.7 5.19 4.26 6.75-.17.63-.6 2.23-.68 2.56-.1.4.15.4.3.3.12-.08 1.9-1.3 2.66-1.82.82.12 1.67.18 2.46.18 5.52 0 10-3.87 10-8.57C22 5.87 17.52 2 12 2z"/></svg>
+            เปิด LINE อีกครั้ง
+          </a>
         </div>
         <!-- Error state -->
         <div id="investor-error" class="hidden mt-3 bg-red-900/30 border border-red-500/40 rounded-lg px-4 py-3 text-sm text-red-300">
@@ -797,27 +799,24 @@
 
 <script>
 (function(){
+  var budgetLabel = {'lt500k':'ต่ำกว่า 500K','500k-1m':'500K–1M','1m-3m':'1M–3M','gt3m':'มากกว่า 3M'};
   var form = document.getElementById('investor-form');
   if (!form) return;
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    var btn = document.getElementById('investor-submit');
-    var txt = document.getElementById('submit-text');
-    var spin = document.getElementById('submit-spinner');
-    var err = document.getElementById('investor-error');
-    btn.disabled = true; txt.textContent = 'กำลังส่ง...'; spin.classList.remove('hidden'); err.classList.add('hidden');
-    fetch(form.action, {method:'POST', body: new FormData(form), headers:{Accept:'application/json', 'X-Requested-With':'XMLHttpRequest'}})
-      .then(function(r){ return r.json(); })
-      .then(function(data){
-        if (data.ok) {
-          form.classList.add('hidden');
-          document.getElementById('investor-success').classList.remove('hidden');
-        } else { throw new Error(); }
-      })
-      .catch(function(){
-        btn.disabled = false; txt.textContent = 'ลงทะเบียนรอดีลแรก'; spin.classList.add('hidden');
-        err.classList.remove('hidden');
-      });
+    var name   = form.querySelector('[name="name"]').value.trim();
+    var email  = form.querySelector('[name="email"]').value.trim();
+    var line   = form.querySelector('[name="line_id"]').value.trim();
+    var budget = form.querySelector('[name="budget"]').value;
+    var msg = '[PhuTrust] นักลงทุนสนใจ\n'
+            + 'ชื่อ: ' + name + '\n'
+            + 'อีเมล: ' + email + '\n'
+            + (line ? 'LINE: ' + line + '\n' : '')
+            + 'งบลงทุน: ' + (budgetLabel[budget] || budget) + ' บาท';
+    var lineUrl = 'https://line.me/R/oaMessage/298zfjhq/?text=' + encodeURIComponent(msg);
+    window.open(lineUrl, '_blank');
+    form.classList.add('hidden');
+    document.getElementById('investor-success').classList.remove('hidden');
   });
 })();
 </script>
