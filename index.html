@@ -105,7 +105,7 @@
       <a href="#compare" class="hover:text-brand-600">เปรียบเทียบ</a>
       <a href="/blog/" class="hover:text-brand-600">บทความ</a>
       <a href="#faq" class="hover:text-brand-600">คำถามที่พบบ่อย</a>
-      <a href="#" class="hover:text-brand-600">สำหรับนักลงทุน</a>
+      <a href="#investor" class="hover:text-brand-600">สำหรับนักลงทุน</a>
     </div>
     <div class="flex items-center gap-2">
       <a href="#calculator" class="bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg">ลองประเมินวงเงิน (Demo)</a>
@@ -693,6 +693,135 @@
   </div>
 </section>
 
+<!-- ============ INVESTOR WAITLIST ============ -->
+<!-- Formspree setup: go to formspree.io → New Form → copy endpoint → replace FORM_ID below -->
+<section id="investor" class="py-20 bg-navy-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 grid-pattern opacity-40"></div>
+  <div class="relative max-w-5xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <!-- Left: value prop -->
+      <div>
+        <div class="text-gold-500 font-semibold text-sm mb-3 uppercase tracking-wider">สำหรับนักลงทุน</div>
+        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-5">
+          ลงทุนขายฝากที่ดิน<br><span class="text-gold-500">ผลตอบแทน 10–15%/ปี</span>
+        </h2>
+        <p class="text-white/70 text-lg leading-relaxed mb-8">
+          PhuTrust คัดกรอง due diligence ทุกดีลก่อนให้นักลงทุนเห็น —
+          ดูราคาประเมินจริง LTV ทำเลที่ตั้ง และประวัติผู้ขายฝาก
+          จดทะเบียนที่กรมที่ดิน 100% ตาม พ.ร.บ. 2562
+        </p>
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="bg-white/10 rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-gold-500">10–15%</div>
+            <div class="text-xs text-white/60 mt-1">ผลตอบแทนต่อปี</div>
+          </div>
+          <div class="bg-white/10 rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-gold-500">100%</div>
+            <div class="text-xs text-white/60 mt-1">จดกรมที่ดิน</div>
+          </div>
+          <div class="bg-white/10 rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-gold-500">≤15%</div>
+            <div class="text-xs text-white/60 mt-1">ดอกตามกฎหมาย</div>
+          </div>
+        </div>
+        <p class="text-white/40 text-xs leading-relaxed">
+          * ผลตอบแทนที่แสดงเป็นช่วงที่เกิดขึ้นจริงในตลาด ไม่ใช่การรับประกัน
+          การลงทุนมีความเสี่ยง ควรศึกษาข้อมูลก่อนตัดสินใจ
+        </p>
+      </div>
+
+      <!-- Right: waitlist form -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+        <h3 class="text-xl font-bold mb-2">ลงทะเบียนรอดีลแรก</h3>
+        <p class="text-white/60 text-sm mb-6">กรอกข้อมูลเพื่อรับแจ้งเตือนเมื่อดีลพร้อม — ไม่มีค่าใช้จ่าย ยกเลิกได้ทุกเมื่อ</p>
+
+        <form id="investor-form" action="https://formsubmit.co/ajax/chanvit.kasetpiban@gmail.com" method="POST" class="space-y-4">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="box" />
+          <div>
+            <label class="block text-sm font-medium text-white/80 mb-1.5">ชื่อ–นามสกุล <span class="text-red-400">*</span></label>
+            <input type="text" name="name" required
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500"
+              placeholder="ชื่อของคุณ" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white/80 mb-1.5">อีเมล <span class="text-red-400">*</span></label>
+            <input type="email" name="email" required
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500"
+              placeholder="email@example.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white/80 mb-1.5">LINE ID <span class="text-white/40 font-normal">(ไม่บังคับ)</span></label>
+            <input type="text" name="line_id"
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white placeholder-white/30 text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500"
+              placeholder="@yourline" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white/80 mb-1.5">งบประมาณลงทุน <span class="text-red-400">*</span></label>
+            <select name="budget" required
+              class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 appearance-none">
+              <option value="" disabled selected class="text-gray-800">เลือกช่วงวงเงิน</option>
+              <option value="lt500k" class="text-gray-800">ต่ำกว่า 500,000 บาท</option>
+              <option value="500k-1m" class="text-gray-800">500,000 – 1,000,000 บาท</option>
+              <option value="1m-3m" class="text-gray-800">1,000,000 – 3,000,000 บาท</option>
+              <option value="gt3m" class="text-gray-800">มากกว่า 3,000,000 บาท</option>
+            </select>
+          </div>
+          <input type="hidden" name="_subject" value="[PhuTrust] นักลงทุนใหม่ลงทะเบียน" />
+          <button type="submit" id="investor-submit"
+            class="w-full bg-gold-500 hover:bg-amber-500 text-navy-900 font-bold py-3 rounded-lg text-sm transition flex items-center justify-center gap-2">
+            <span id="submit-text">ลงทะเบียนรอดีลแรก</span>
+            <svg id="submit-spinner" class="hidden animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Success state -->
+        <div id="investor-success" class="hidden text-center py-6">
+          <div class="text-4xl mb-3">✓</div>
+          <p class="font-bold text-lg mb-2">ลงทะเบียนสำเร็จ!</p>
+          <p class="text-white/60 text-sm">เราจะแจ้งเตือนคุณทางอีเมลเมื่อดีลแรกพร้อม ขอบคุณที่สนใจ PhuTrust</p>
+        </div>
+        <!-- Error state -->
+        <div id="investor-error" class="hidden mt-3 bg-red-900/30 border border-red-500/40 rounded-lg px-4 py-3 text-sm text-red-300">
+          เกิดข้อผิดพลาด กรุณาลองใหม่หรือติดต่อผ่าน LINE
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var form = document.getElementById('investor-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = document.getElementById('investor-submit');
+    var txt = document.getElementById('submit-text');
+    var spin = document.getElementById('submit-spinner');
+    var err = document.getElementById('investor-error');
+    btn.disabled = true; txt.textContent = 'กำลังส่ง...'; spin.classList.remove('hidden'); err.classList.add('hidden');
+    fetch(form.action, {method:'POST', body: new FormData(form), headers:{Accept:'application/json', 'X-Requested-With':'XMLHttpRequest'}})
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (data.ok) {
+          form.classList.add('hidden');
+          document.getElementById('investor-success').classList.remove('hidden');
+        } else { throw new Error(); }
+      })
+      .catch(function(){
+        btn.disabled = false; txt.textContent = 'ลงทะเบียนรอดีลแรก'; spin.classList.add('hidden');
+        err.classList.remove('hidden');
+      });
+  });
+})();
+</script>
+
 <!-- ============ CTA ============ -->
 <section class="py-20 bg-gradient-to-br from-gold-500 via-amber-500 to-gold-500 relative overflow-hidden">
   <div class="absolute inset-0 grid-pattern opacity-20"></div>
@@ -760,11 +889,10 @@
       <div>
         <div class="font-semibold mb-4">สำหรับนักลงทุน</div>
         <ul class="space-y-2 text-sm text-white/70">
-          <li><a href="#" class="hover:text-white">ดีลที่กำลังเปิด (Login)</a></li>
-          <li><a href="#" class="hover:text-white">วิธีการลงทุน</a></li>
-          <li><a href="#" class="hover:text-white">ผลตอบแทนและความเสี่ยง</a></li>
-          <li><a href="#" class="hover:text-white">Due diligence process</a></li>
-          <li><a href="#" class="hover:text-white">สมัครเป็นสมาชิกนักลงทุน</a></li>
+          <li><a href="#investor" class="hover:text-white">ลงทะเบียนนักลงทุน</a></li>
+          <li><a href="#investor" class="hover:text-white">ผลตอบแทนและความเสี่ยง</a></li>
+          <li><a href="/blog/khaifaak-ekkasaan/" class="hover:text-white">เอกสารขายฝาก</a></li>
+          <li><a href="https://lin.ee/Ub0Xvbh" target="_blank" rel="noopener" class="hover:text-white">ปรึกษาผ่าน LINE</a></li>
         </ul>
       </div>
 
