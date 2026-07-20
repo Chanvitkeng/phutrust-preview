@@ -103,7 +103,7 @@
     <!-- Category Filter -->
     <div class="flex flex-wrap gap-2 mb-8" id="filter-bar">
       <button data-filter="ทั้งหมด" class="filter-btn active px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-navy-900 bg-white hover:border-navy-900">
-        ทั้งหมด <span class="ml-1 text-xs font-normal text-ink-500">17</span>
+        ทั้งหมด <span class="ml-1 text-xs font-normal text-ink-500">18</span>
       </button>
       <button data-filter="พื้นฐาน" class="filter-btn px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-ink-700 bg-white hover:border-navy-900">
         📖 พื้นฐาน <span class="ml-1 text-xs font-normal text-ink-500">2</span>
@@ -124,18 +124,41 @@
         📄 เอกสารสิทธิ์ <span class="ml-1 text-xs font-normal text-ink-500">1</span>
       </button>
       <button data-filter="ทำเล" class="filter-btn px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-ink-700 bg-white hover:border-navy-900">
-        📍 ทำเล <span class="ml-1 text-xs font-normal text-ink-500">2</span>
+        📍 ทำเล <span class="ml-1 text-xs font-normal text-ink-500">3</span>
       </button>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6" id="articles-grid">
 
-      <!-- 0. ใหม่สุด: ขายฝากที่ดินเชียงใหม่ -->
+      <!-- 0. ใหม่สุด: ขายฝากที่ดินกรุงเทพ -->
+      <a href="/blog/khaifaak-krungthep/" data-cat="ทำเล" class="article-card group block bg-white rounded-2xl border border-ink-300/40 overflow-hidden card-shadow hover:shadow-xl transition">
+        <div class="relative h-48 overflow-hidden">
+          <img src="/blog/images/thumb-krungthep.webp" alt="ขายฝากที่ดินกรุงเทพ ข้อมูลครบทุกเขต" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute top-4 left-4 bg-gold-500 text-navy-900 text-xs font-bold px-2.5 py-1 rounded uppercase">Local</div>
+          <div class="absolute top-4 right-4 bg-navy-900/80 text-white text-xs font-bold px-2.5 py-1 rounded">ใหม่</div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 text-xs text-ink-500 mb-3">
+            <span>20 ก.ค. 2569</span><span>·</span><span>Local SEO</span><span>·</span><span>อ่าน 8 นาที</span>
+          </div>
+          <h3 class="font-bold text-navy-900 text-xl leading-tight mb-3 group-hover:text-brand-600 transition">
+            ขายฝากที่ดินกรุงเทพ ทำได้ไหม? ข้อมูลครบ (2569)
+          </h3>
+          <p class="text-ink-700 text-sm leading-relaxed">
+            ขายฝากได้ทุกเขต — วงเงิน LTV 50–70% ตามทำเล รับทั้งที่ดิน คอนโด บ้าน อาคารพาณิชย์ ดอกเบี้ยไม่เกิน 15% และข้อควรระวังเฉพาะทำเลเมืองหลวง
+          </p>
+          <div class="mt-5 inline-flex items-center gap-2 text-brand-600 font-semibold text-sm">
+            อ่านบทความ
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- 0. ขายฝากที่ดินเชียงใหม่ -->
       <a href="/blog/khaifaak-chiangmai/" data-cat="ทำเล" class="article-card group block bg-white rounded-2xl border border-ink-300/40 overflow-hidden card-shadow hover:shadow-xl transition">
         <div class="relative h-48 overflow-hidden">
           <img src="/blog/images/thumb-chiangmai.webp" alt="ขายฝากที่ดินเชียงใหม่ ข้อมูลครบทุกอำเภอ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
           <div class="absolute top-4 left-4 bg-gold-500 text-navy-900 text-xs font-bold px-2.5 py-1 rounded uppercase">Local</div>
-          <div class="absolute top-4 right-4 bg-navy-900/80 text-white text-xs font-bold px-2.5 py-1 rounded">ใหม่</div>
         </div>
         <div class="p-6">
           <div class="flex items-center gap-3 text-xs text-ink-500 mb-3">
