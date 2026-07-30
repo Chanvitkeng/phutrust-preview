@@ -103,7 +103,7 @@
     <!-- Category Filter -->
     <div class="flex flex-wrap gap-2 mb-8" id="filter-bar">
       <button data-filter="ทั้งหมด" class="filter-btn active px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-navy-900 bg-white hover:border-navy-900">
-        ทั้งหมด <span class="ml-1 text-xs font-normal text-ink-500">20</span>
+        ทั้งหมด <span class="ml-1 text-xs font-normal text-ink-500">21</span>
       </button>
       <button data-filter="พื้นฐาน" class="filter-btn px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-ink-700 bg-white hover:border-navy-900">
         📖 พื้นฐาน <span class="ml-1 text-xs font-normal text-ink-500">4</span>
@@ -118,7 +118,7 @@
         ⚖️ เปรียบเทียบ <span class="ml-1 text-xs font-normal text-ink-500">3</span>
       </button>
       <button data-filter="ความเสี่ยง" class="filter-btn px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-ink-700 bg-white hover:border-navy-900">
-        🛡️ ความเสี่ยง <span class="ml-1 text-xs font-normal text-ink-500">1</span>
+        🛡️ ความเสี่ยง <span class="ml-1 text-xs font-normal text-ink-500">2</span>
       </button>
       <button data-filter="เอกสารสิทธิ์" class="filter-btn px-4 py-2 rounded-full border border-ink-300 text-sm font-semibold text-ink-700 bg-white hover:border-navy-900">
         📄 เอกสารสิทธิ์ <span class="ml-1 text-xs font-normal text-ink-500">1</span>
@@ -129,6 +129,30 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-6" id="articles-grid">
+
+      <!-- 0. ใหม่สุด: ขายฝากกับนายหน้า -->
+      <a href="/blog/khaifaak-nainakhna/" data-cat="ความเสี่ยง" class="article-card group block bg-white rounded-2xl border border-ink-300/40 overflow-hidden card-shadow hover:shadow-xl transition">
+        <div class="relative h-48 overflow-hidden">
+          <img src="/blog/images/thumb-nainakhna.webp" alt="ขายฝากที่ดินกับนายหน้า ระวังอะไรบ้าง" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute top-4 left-4 bg-amber-500 text-navy-900 text-xs font-bold px-2.5 py-1 rounded uppercase">ความเสี่ยง</div>
+          <div class="absolute top-4 right-4 bg-navy-900/80 text-white text-xs font-bold px-2.5 py-1 rounded">ใหม่</div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 text-xs text-ink-500 mb-3">
+            <span>30 ก.ค. 2569</span><span>·</span><span>ความเสี่ยง</span><span>·</span><span>อ่าน 9 นาที</span>
+          </div>
+          <h3 class="font-bold text-navy-900 text-xl leading-tight mb-3 group-hover:text-brand-600 transition">
+            ขายฝากที่ดินกับนายหน้า ระวังอะไรบ้าง? (2569)
+          </h3>
+          <p class="text-ink-700 text-sm leading-relaxed">
+            แยกนายหน้ามืออาชีพ vs เถื่อน 7 สัญญาณเตือน ค่านายหน้าเท่าไหร่ วิธีตรวจสอบก่อนตกลง และทำไมคุณขายฝากเองได้โดยไม่ต้องผ่านนายหน้า
+          </p>
+          <div class="mt-5 inline-flex items-center gap-2 text-brand-600 font-semibold text-sm">
+            อ่านบทความ
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </div>
+      </a>
 
       <!-- 0. ใหม่สุด: ข้อดีข้อเสียขายฝาก -->
       <a href="/blog/khaifaak-khodi-khoseai/" data-cat="พื้นฐาน" class="article-card group block bg-white rounded-2xl border border-ink-300/40 overflow-hidden card-shadow hover:shadow-xl transition">
